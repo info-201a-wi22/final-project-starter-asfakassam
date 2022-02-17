@@ -7,9 +7,7 @@ crime_state <- read.csv(
 )
 
 plot_data <- crime_state %>%
-  filter(
-    (Year >= 2005 & Year <= 2011)
-  ) %>%
+  filter(Year >= 2005 & Year <= 2011)%>%
   select(State, Year, Data.Totals.Violent.All)%>%
 
 crime_plot <- ggplot(plot_data) + 
