@@ -45,7 +45,7 @@ However, the cost of increasing law enforcement regulations can be high and the 
 ### Research questions
 The main questions that our team will address:
 
-1)In each state, which crime has experienced the greatest change in number and which crime has experienced the least change in number over the six years?
+1) In each state, which crime has experienced the greatest change in number and which crime has experienced the least change in number over the six years?
 
 2) Which state has seen the greatest increase in the number of crimes over the six years?
 
@@ -81,10 +81,10 @@ Our team would like to sincerely thank Samuel Gregory McCullough, our teaching a
 
 ### References
 
-1.Colvin, R. (2009, January 27). U.S. recession fuels crime rise, police chiefs say. Reuters. Retrieved February 5, 2022, from https://www.reuters.com/article/us-usa-economy-crime-idUSTRE50Q6FR20090127
+1) Colvin, R. (2009, January 27). U.S. recession fuels crime rise, police chiefs say. Reuters. Retrieved February 5, 2022, from https://www.reuters.com/article/us-usa-economy-crime-idUSTRE50Q6FR20090127
 
-2.FBI. (2018, September 24). Download printable files. FBI. Retrieved February 5, 2022, from https://ucr.fbi.gov/crime-in-the-u.s/2019/crime-in-the-u.s.-2019/downloads/download-printable-files
+2) FBI. (2018, September 24). Download printable files. FBI. Retrieved February 5, 2022, from https://ucr.fbi.gov/crime-in-the-u.s/2019/crime-in-the-u.s.-2019/downloads/download-printable-files
 
-3.James Q. Wilson, formerly a professor at H. and at U. C. L. A. (2019, June 16). Crime and the great recession. City Journal. Retrieved February 5, 2022, from https://www.city-journal.org/html/crime-and-great-recession-13399.html
+3) James Q. Wilson, formerly a professor at H. and at U. C. L. A. (2019, June 16). Crime and the great recession. City Journal. Retrieved February 5, 2022, from https://www.city-journal.org/html/crime-and-great-recession-13399.html
 
-4.Uggen, C. (2012, October). Crime and the Great Recession.  <br/><br/>5. Whitcomb, R., Choy, J. M., &amp; Guan, B. (n.d.). State crime CSV file. CORGIS Datasets Project. Retrieved February 5, 2022, from https://corgis-edu.github.io/corgis/csv/state_crime/|
+4) Uggen, C. (2012, October). Crime and the Great Recession.  <br/><br/>5. Whitcomb, R., Choy, J. M., &amp; Guan, B. (n.d.). State crime CSV file. CORGIS Datasets Project. Retrieved February 5, 2022, from https://corgis-edu.github.io/corgis/csv/state_crime/|
