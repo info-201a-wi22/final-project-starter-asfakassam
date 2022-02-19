@@ -51,7 +51,7 @@ The main questions that our team will address:
 **1) The change in trends of violent crimes in each states before, during and after the Great Recession.**
 
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
 source("../source/chart1.R")
 crime_plot
 ```
@@ -60,7 +60,7 @@ crime_plot
 
 
 **2) The change in trends of property crimes in each states before, during and after the Great Recession.**
-```{r, echo=FALSE}
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
 source("../source/chart2.R")
 crime_plot
 ```
@@ -71,7 +71,7 @@ crime_plot
 **3) Which State had maximum criminal activity during 2008?**
 
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
 source("../source/chart3.R")
 crime_map
 ```
@@ -104,13 +104,13 @@ The exact source of funding for this database has not been mentioned. However, i
 That being said, the lack of the aforementioned information could easily be used by corporations who deal with security, safety and well-being related products for increasing their sales, and hence their profit. For example, when there is an increase in the crime rate, companies who provide home security can use these statistics to create fear amongst people, and promote their products. Likewise, when there is a decrease in the crime rate in a particular area, a popular home security system may link the usage of their product to the decline to promote their company.
 
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
 source("../source/summary_table.R")
 table_data
 ```
 > This table gives a preview of the dataset we worked on. It shows the number of violent and property crimes committed two years before, during and after the Great Recession
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
 source("../source/summary.R")
 summary
 ```
