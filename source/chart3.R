@@ -2,7 +2,8 @@
 library(ggplot2)
 library(maps)
 library(usdata)
-
+library(dplyr)
+library(plotly)
 #1)load dataset
 data <-read.csv("https://raw.githubusercontent.com/info-201a-wi22/final-project-starter-asfakassam/main/data/state_crime.csv",stringsAsFactors = FALSE)
 
@@ -32,7 +33,7 @@ plot <- ggplot(state_shape) +
     mapping = aes(x = long, y = lat, group = group, fill = Data.Totals.Property.All)
   )
 
-
+ggplotly(plot)
 
 
 
