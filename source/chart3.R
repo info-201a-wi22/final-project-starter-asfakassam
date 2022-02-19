@@ -31,13 +31,19 @@ state_shape <- state_shape %>%
   left_join(crime_data_2008, by = "state")
 
 #5): Create a map
-plot <- ggplot(state_shape) +
+crime_map <- ggplot(state_shape) +
   geom_polygon(
-    mapping = aes(x = long, y = lat, group = group, fill = total_crime)
+    mapping = aes(x = long, y = lat, group = group, fill = total_crime), color="darkred", size=0.2
   )
 
+#add a title to the map
+crime_map <-crime_map + ggtitle("Crime map in 2008 USA for both property and violent crime")
+
+#plot out the map
+crime_map
+
 #Make the map interactive 
-ggplotly(plot)
+ggplotly(crime_map)
 
 
 
