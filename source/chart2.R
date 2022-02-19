@@ -29,7 +29,7 @@ crime_plot <- ggplot(plot_data) +
 bar_chart <- ggplotly(crime_plot)
 
 crime_plot <- bar_chart %>% layout(
-  title = "Bar Chart of Total Number of Property Crime in Each State (2005-2011)",
+  title = "Scatter Plot of Total Number of Property Crime in Each State (2005-2011)",
   xaxis = list(title = "State"),
   yaxis = list(title = "Total Number of Property Crime")
 )
