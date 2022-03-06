@@ -1,5 +1,7 @@
 #load packages
 library("dplyr")
+install.packages("knitr")
+library("knitr")
 
 #1)import dataset
 data <-read.csv("https://raw.githubusercontent.com/info-201a-wi22/final-project-starter-asfakassam/main/data/state_crime.csv",stringsAsFactors = FALSE)
@@ -20,6 +22,10 @@ summary$num_state <-crime_data %>%
   select(State) %>% 
   unique() %>% 
   nrow()
+
+kable(summary)
+
+
 
 #6)summarize the number of years we focus
 summary$num_years <-crime_data %>% 
@@ -72,8 +78,7 @@ summary$total_vio <-crime_data %>%
   group_by(Year) %>%
   summarise(total_violent_crime=sum(Data.Totals.Violent.All))
 
-
-
+kable(summary)
 
 
 
