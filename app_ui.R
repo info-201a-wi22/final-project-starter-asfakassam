@@ -16,6 +16,7 @@ sidebar_content1 <- sidebarPanel(
     "state",
     label = "State of Interest",
     choices = selected_values,
+    selected = "WA"
   )
 )
 main_content1 <- mainPanel(
@@ -23,7 +24,7 @@ main_content1 <- mainPanel(
 )
 
 interactive_panel1 <- tabPanel(
-  "Interactive Panel 1",
+  "Violence Crime",
   titlePanel("Change in Violence Crime"),
   p(strong("1) The change in trends of violent crimes in each states before, during and after the Great Recession.")),
   sidebarLayout(
@@ -52,7 +53,7 @@ main_content2 <- mainPanel(
 )
 
 interactive_panel2 <- tabPanel(
-  "Interactive Panel 2",
+  "Property Crime",
   titlePanel("Change in Property Crime"),
   p(strong("2) The change in trends of property crimes in each states before, during and after the Great Recession.")),
   sidebarLayout(
@@ -81,7 +82,7 @@ main_content3 <- mainPanel(
 )
 
 interactive_panel3 <- tabPanel(
-  "Interactive Panel 3",
+  "Total Crime",
   titlePanel("Map of Total Number of Crime"),
   p(strong("3) Criminal activity during 2008 in the United States")),
   sidebarLayout(
