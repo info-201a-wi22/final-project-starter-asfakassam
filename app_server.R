@@ -72,6 +72,7 @@ server <- function(input, output){
       ggtitle ("Bar Chart of Total Number of Violence Crime")+ 
       labs(x = "State", y="Total Number of Violence Crime", colour = "year")  
       crime_plot
+  
   })
   
   output$map <- renderPlotly({
@@ -102,7 +103,7 @@ server <- function(input, output){
   filtered2 <- function(states){
     state_shape%>%
       filter(str_detect(states, state))%>% 
-      pull(Data.Totals.Violent.All)%>%  
+      pull(Data.Totals.Violent.All)%>%
       unique()
   }
 
