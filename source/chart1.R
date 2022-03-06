@@ -24,15 +24,12 @@ View(plot_data)
 crime_plot <- ggplot(plot_data) + 
   geom_col(
     mapping = aes(x = State, y = violent_crimes, fill = Year),
-  )
-  
+  )+
+  ggtitle ("Bar Chart of Total Number of Violence Crime in Each State (2005-2011)")+
+  labs(x = "State", y="Total Number of Violence Crime" )
+ 
 bar_chart <- ggplotly(crime_plot)
+bar_chart
 
-crime_plot <- bar_chart %>% layout(
-  title = "Bar Chart of Total Number of Violence Crime in Each State (2005-2011)",
-  xaxis = list(title = "State"),
-  yaxis = list(title = "Total Number of Violence Crime")
-)
 
-crime_plot
 

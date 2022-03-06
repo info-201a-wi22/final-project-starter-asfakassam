@@ -9,26 +9,28 @@ intro_panel <- tabPanel(
   img("", src = "")
 )
 
-# selected_values <- 
-# sidebar_content1 <- sidebarPanel(
-#   selectInput(
-#     "state",
-#     label = "State of Interest",
-#     choices = selected_values,
-#     selected = "WA"
-#   )
-# )
-# main_content1 <- mainPanel(
-# )
+selected_values <-plot_data$State%>%
+  unique()
+sidebar_content1 <- sidebarPanel(
+  selectInput(
+    "state",
+    label = "State of Interest",
+    choices = selected_values,
+    
+  )
+)
+main_content1 <- mainPanel(
+  plotlyOutput("bar")
+)
 
 interactive_panel1 <- tabPanel(
   "Interactive Panel 1",
   titlePanel("Change in Violence Crime"),
   p(strong("1) The change in trends of violent crimes in each states before, during and after the Great Recession.")),
-#   sidebarLayout(
-#     sidebar_content1,
-#     main_content1
-# ),
+  sidebarLayout(
+    sidebar_content1,
+    main_content1
+),
    p("This bar chart is included to demonstrate the impact of the Great Recession on violence crime numbers.
       The bar chart is an efficient approach for comparing the number of violence crimes before (2005-2006), during (2007-2009),
       and after (2010-2011) the Great Recession in each state. The audience can directly see the impact of the Great Recession on violence crime by
