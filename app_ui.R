@@ -31,6 +31,7 @@ interactive_panel1 <- tabPanel(
     sidebar_content1,
     main_content1
 ),
+   p(""),
    p("This bar chart is included to demonstrate the impact of the Great Recession on violence crime numbers.
       The bar chart is an efficient approach for comparing the number of violence crimes before (2005-2006), during (2007-2009),
       and after (2010-2011) the Great Recession in each state. The audience can directly see the impact of the Great Recession on violence crime by
@@ -60,6 +61,7 @@ interactive_panel2 <- tabPanel(
     sidebar_content2,
     main_content2
   ),
+  p(""),
   p("The scatter plot chart is included to show the impact of the Great Recession on property crime numbers by comparing the position 
      of dots representing different time periods in each state. It provides a way to see which period has the most property crime numbers. 
      If the numbers during recession happen to be the largest, then it proves the assumption that the Great Recession had a negative impact 
