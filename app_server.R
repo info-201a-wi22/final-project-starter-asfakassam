@@ -1,6 +1,9 @@
 library(dplyr)
 library(plotly)
 library(ggplot2)
+library(maps)
+library(usdata)
+library(stringr) 
 
 server <- function(input, output){
   timeout = 9000
@@ -38,13 +41,24 @@ server <- function(input, output){
     group_by(State, Year) %>%
     summarise(violent_crimes = sum(Data.Totals.Violent.All))
   
+  crime_data_2008 <-crime_state %>% 
+    filter(Year=="2008") %>% 
+    select(State,Data.Totals.Property.All,Data.Totals.Violent.All) %>% 
+    rename(state=State) %>% 
+    mutate(total_crime=Data.Totals.Property.All+Data.Totals.Violent.All)
+  
+  state_shape <- map_data("state") %>%
+    rename(state = region)%>%
+    mutate(state = state2abbr(state)) %>%
+    left_join(crime_data_2008, by = "state")
+  
   output$scatter <- renderPlotly({
     p <- ggplot(
       data = sorted_data, 
       mapping = aes (x = State, y = property_crimes, fill = Year)
     ) + 
       geom_point(size = input$size)+
-      ggtitle("Relationship Between CO2 Emission and the Variables") +
+      ggtitle("Scatter Plot of Total Number of Property Crime") +
       labs(x = "state", y = "number of property crimes", colour ="year")
     p
   })
@@ -55,12 +69,46 @@ server <- function(input, output){
       mapping = aes(x = input$state, y = violent_crimes, fill = Year),
       )+
       geom_col()+
-      ggtitle ("Bar Chart of Total Number of Violence Crime  (2005-2011)")+
+      ggtitle ("Bar Chart of Total Number of Violence Crime")+ 
       labs(x = "State", y="Total Number of Violence Crime", colour = "year")  
       crime_plot
-  
   })
   
-
+  output$map <- renderPlotly({
+    crime_map <- ggplot(
+      data = state_shape,  
+      mapping = aes(x = long, y = lat, group = group, fill = total_crime), color = "darkred", size = 0.2
+    )+
+      geom_polygon()+
+      ggtitle ("Crime map in 2008 USA for both property and violent crime")
+    crime_map
+    
+  })
   
+  filtered <- function(states){
+      state_shape%>%
+      filter(str_detect(states, state))%>% 
+      pull(total_crime)%>%
+      unique()
+  }
+  
+  filtered1 <- function(states){
+    state_shape%>%
+      filter(str_detect(states, state))%>% 
+      pull(Data.Totals.Property.All)%>%
+      unique()
+  }
+  
+  filtered2 <- function(states){
+    state_shape%>%
+      filter(str_detect(states, state))%>% 
+      pull(Data.Totals.Violent.All)%>%  
+      unique()
+  }
+
+  output$text_choice <- renderPrint({
+    return(paste("You have chosen the state ", abbr2state(input$checkGroup1), " and there are", filtered(input$checkGroup1), " crimes committed in this state in 2008 in total.",
+                 filtered1(input$checkGroup1), "of which are violence crime, and ", filtered2(input$checkGroup1), "of which are property crime."))
+                 })
+
 }

@@ -16,7 +16,6 @@ sidebar_content1 <- sidebarPanel(
     "state",
     label = "State of Interest",
     choices = selected_values,
-    
   )
 )
 main_content1 <- mainPanel(
@@ -70,14 +69,21 @@ interactive_panel2 <- tabPanel(
 )
 
 sidebar_content3 <- sidebarPanel(
+  checkboxGroupInput("checkGroup1", label = "Please select state of interest and scroll down to see summary.", 
+                     
+                     choices = selected_values,
+                     selected = "AL"
+                     ),
+  textOutput("text_choice"),
 )
 main_content3 <- mainPanel(
+  plotlyOutput("map")
 )
 
 interactive_panel3 <- tabPanel(
   "Interactive Panel 3",
   titlePanel("Map of Total Number of Crime"),
-  p(strong("3) Which State had maximum criminal activity during 2008?")),
+  p(strong("3) Criminal activity during 2008 in the United States")),
   sidebarLayout(
     sidebar_content3,
     main_content3
