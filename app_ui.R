@@ -102,8 +102,25 @@ interactive_panel3 <- tabPanel(
 summary <- tabPanel(
   "Summary",
   h1("Summary"),
-  p(""),
-  tableOutput("table")
+  sidebarLayout(
+    sidebar_content_x <- sidebarPanel(
+  p(strong("1) States with Highest Property Crime in Each Year")),
+  tableOutput("table1"),
+  p(strong("2) States with Lowest Property Crime in Each Year")),
+  tableOutput("table2"),
+  p(strong("3) States with Highest Violence Crime in Each Year")),
+  tableOutput("table3"),
+  p(strong("4) States with Lowest Violence Crime in Each Year")),
+  tableOutput("table4"),
+  p(strong("5) Total Property Crime in Each Year")),
+  tableOutput("table5"),
+  p(strong("6) Total Violence Crime in Each Year")),
+  tableOutput("table6")
+    ),
+  main_content <- mainPanel(
+    p("The Summary")
+  )
+  )
 )
 
 report <- tabPanel(
