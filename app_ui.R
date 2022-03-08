@@ -6,7 +6,8 @@ intro_panel <- tabPanel(
   "Introductory Page",
   h1("Introduction"),
   p(""),
-  img("", src = "")
+  img(src = "https://partners4prosperity.com//wp-content/uploads/2012/01/recession.jpg", height="50%", width="50%", align="right"),
+  img(src = "https://www.ipr.northwestern.edu/news/2018/images/stock-crashing.jpg", height="50%", width="50%", align="right")
 )
 
 selected_values <-plot_data$State%>%
