@@ -206,11 +206,28 @@ report <- tabPanel(
      For example, when there is an increase in the crime rate, companies who provide home security can use these statistics to create fear amongst people, and promote their products. Likewise, when there is a decrease in the 
      crime rate in a particular area, a popular home security system may link the usage of their product to the decline to promote their company."),
   h1("5.0 Findings"),
-  p(""),
+  p("The main goal of this report is to examine the change in the trends of criminal activity two years before, during and two years after the Great Recession of 2008. Various graphical methods have been used to help visualize the number of various types of crimes committed in each state. Through analysis of these visual aids, we can compare the changes in the number of crimes committed before, during and after the Great Recession. 
+"),
+  p("To analyze the change in trends of specifically violent crimes in each state two years before, during and after the Great Recession a bar graph is used as a visual aid. Each bar represents a different state, and the height of each bar represents the number of violent crimes committed. Additionally, each bar is divided into three different sections, each representing a time period of two years before, during and after the Great Recession. From the graph it is evident that violent crimes were more prevalent before and during the Great Recession. After the recession, the crime rate seems to be lower than the other two time periods. The distinction is especially evident in the states of California and Texas.
+"),
+  p("To analyze the total number of property crimes for every state two years before, during and after the Great Recession, a scatter plot is used. Different colored dots are used to represent different periods for each state. Most of the dots that represent the period before and during the Recession are higher than the dots representing the dots after the Recession. Hence, it can be concluded that more property crimes were committed during the Recession than before or after. 
+"),
+  p("Combining the statistics for both - violent and property crimes, the third visualization shows the spread of both-violent and property crimes committed across the states. A gradation of color is used to represent the number of crimes committed in each state, with darker shade being the lowest and the lighter shade being the highest number of crimes. It is quite obvious from the color gradation map that California, Texas and Florida have the highest crime rates. 
+"),
+  p("From the visual representations of the data, it can be concluded that the criminal activity was higher before and during the Recession, and declined after.
+"),
   h1("6.0 Discussion"),
-  p(""),
+  p("The analysis of the data with the help of visual representation reveals that crime rates were higher before and during the Recession than after it. This implies that the circumstances before and during the Recession led to more criminal activity. This adds to the evidence of the theory of  the correlation of crime and economic events. It also aligns with the intuition that crime rates are bound to increase during times of distress. There are of course, many other factors that influence the crime rates, but the correlation of major economic events cannot be ignored, especially since we are currently in the midst of a global pandemic. 
+"),
+  p("The pandemic shut down quite a large number of businesses and put several people out of their jobs. It comes with no surprise that the pandemic impacted our economy as well. Even though this economic event is definitely not like the Great Recession of 2008, it is on a much broader scale since it is a Global Economic Recession, however we can still take lessons from the past to be more prepared. Since it is evident that crime rates tend to increase during economic recessions, we can take measures to control criminal activities.
+"),
+  p("This report highlights the need for additional precaution and safety among people as the pandemic and global recession continues. Policy makers can design better policies around increasing the security and how to tackle the situation. It also provides an additional incentive to the government to provide more aid and pay closer attention to those in need so as to prevent the increase in crime rates. The more vulnerable the population, the more likely it is that they would resort to certain measures of survival that would otherwise not even be an option for them.
+"),
+  p("This data could also be used by several industries to improve their products and services. Additionally, it can be used as a marketing tool for security agencies to sell their products. The increase in crime rates would provide an incentive for people to buy more products that can help them secure their homes and properties as a precautionary measure.
+"),
   h1("7.0 Conclusion"),
-  p(""),
+  p("After  a comprehensive analysis of our data set, it is clear that criminal activity increased in the two years before and during the Great Recession of 2008. However, it declined significantly during the two years following the Great Recession. It was also evident from the graphical visualizations and the map that the more populous states of California, Texas and Florida have the maximum crime rates. This analysis reiterates the direct correlation between an economic recession and criminal activity, which should be used as a learning point for the current and future governments as we deal with a global economic recession.
+"),
   h1("Limitations"),
   p("Although our project can analyze crimes’ data classified by states and crime types, the dataset does not show detailed information about the crimes in certain months. 
     That means our project only focuses on analyzing crimes’ trend over the Great Recession years. As a result, it will be less effective in analyzing the effect of other minor events, 
