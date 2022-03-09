@@ -72,7 +72,8 @@ server <- function(input, output){
   
   output$bar <- renderPlotly({
     crime_plot <- ggplot(
-      data = plot_data,  
+      data = plot_data %>%
+        filter(State == input$state),  
       mapping = aes(x = input$state, y = violent_crimes, fill = Year),
       )+
       geom_col()+
