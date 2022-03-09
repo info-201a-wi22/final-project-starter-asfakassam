@@ -42,6 +42,9 @@ server <- function(input, output){
     group_by(State, Year) %>%
     summarise(violent_crimes = sum(Data.Totals.Violent.All))
   
+  selected_values <-plot_data$State %>%
+    unique()
+  
   crime_data_2008 <-crime_state %>% 
     filter(Year=="2008") %>% 
     select(State,Data.Totals.Property.All,Data.Totals.Violent.All) %>% 
@@ -76,7 +79,6 @@ server <- function(input, output){
       ggtitle ("Bar Chart of Total Number of Violence Crime")+ 
       labs(x = "State", y="Total Number of Violence Crime", colour = "year")  
       crime_plot
-  
   })
   
   output$map <- renderPlotly({

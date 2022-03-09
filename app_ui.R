@@ -5,13 +5,22 @@ library(ggplot2)
 intro_panel <- tabPanel(
   "Introductory Page",
   h1("Introduction"),
-  p(""),
+  p("A great growth in the number of crimes during an economic crisis period has led our attention to the relationships between crimes’ number and the impact of the economy. 
+     Our project focuses on discovering the impact of the Great Recession in 2008 on property and violent crime. We want to reveal what should be properly focused on during an economic downturn, 
+     and eventually help the general public and states’ safety departments make proper decisions to prevent increasing crimes and guarantee safety of citizens at that period.
+"),
+  p("Our project uses the version 3.0.0 of the State Crime CSV file as the primary source for information which was found on the official website of CORGIS CSV Datasets. 
+     This dataset was created by Ryan Whitcomb, Joung Min Choi and Bo Guan on October 19, 2021 (Whitcomb et al.). According to the CORGIS website, these information crime statistics are made available 
+     for the public review from the Unified Crime Reporting Statistics with collaboration of the United States Department of Justice and the Federal Bureau of Investigation.
+"),
+  p("We extract data during the years 2005 to 2011 from this Dataset, which contains data of crimes before, during, and after the Great Recession. Then, we utilize this data to find out the changed number of 
+     property and violent related crimes with that period and make visualizations to show the result. 
+"),
   img(src = "https://partners4prosperity.com//wp-content/uploads/2012/01/recession.jpg", height="50%", width="50%", align="right"),
   img(src = "https://www.ipr.northwestern.edu/news/2018/images/stock-crashing.jpg", height="50%", width="50%", align="right")
 )
 
-selected_values <-plot_data$State%>%
-  unique()
+
 sidebar_content1 <- sidebarPanel(
   selectInput(
     "state",
@@ -119,7 +128,19 @@ summary <- tabPanel(
   tableOutput("table6")
     ),
   main_content <- mainPanel(
-    p("The Summary")
+    p("The table shows some interesting results calculated based on the dataset from 2005 to 2011. It turned out that California remained the state with 
+       the highest number of both property and violent crimes happening during that period. However, until 2011, North Dakota did not consist of the state with the 
+       lowest number of property crimes and violent crimes. Especially in 2010, 2 years after the Great Recession, Wyoming replaced its place and became the state with the 
+       lowest property crimes. It seemed that the reasons North Dakota did not hold that place were related to the Great Recession in 2008.
+"),
+    p("The total number of property crimes happening in the US seemed to decline year by year since 2005. The rate of declination had seemingly no correlation with the Great Recession 
+       that happened in 2008 as the decline seemed to be stable throughout the year from 2005 to 2011. Thus, we may assume that either the Great Recession did not bring changes to the total 
+       number of property crimes, or governments and other organizations had taken action to prevent such changes from happening.
+"),
+    p("On the other hand, the total number of violent crimes happened in the US took turns during that period. From 2005 to 2006, the total number of violent crimes increased dramatically from 1,390,745 to 1,435,123. 
+       Then, during the period of the Great Recession from 2007 to 2009, the number began to drop year by year, and the decreasing trend continued to 2011. The impact of the Great Recession might 
+       play a role in decreasing the total number of violent crimes during that period as the number began to drop right before the Recession in 2008. 
+")
   )
   )
 )
@@ -138,7 +159,7 @@ report <- tabPanel(
   h1("Date"),
   p("March 6, 2022"),
   h1("Abstract"),
-  p("We are concerned with the impact of major events on crime rates because we are currently in a global pandemic, 
+  p("We are concerned with the impact of major events on crime numbers because we are currently in a global pandemic, 
      and an economic recession is looming over us. During such times, safety and security become a major concern among other things. 
      To address this concern, we intend to take a lesson from history by analyzing the impact that the Great Recession of 2008 had on criminal activity. 
      Through this analysis we hope to learn more about the trends of criminal activities during such events and prepare for what to expect in the future."),
